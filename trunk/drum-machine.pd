@@ -1,4 +1,4 @@
-#N canvas 48 33 1074 616 10;
+#N canvas 87 51 1074 616 10;
 #N canvas 136 114 880 461 currinstr 0;
 #X obj -104 174 outlet;
 #X obj 4 64 hradio 30 1 0 10 empty empty empty 8 -8 0 8 -241056 -132235
@@ -123,7 +123,7 @@
 #X connect 67 0 56 0;
 #X coords 0 -1 1 1 310 140 2 0 0;
 #X restore -131 14 pd currinstr;
-#N canvas 110 36 1103 580 grav 0;
+#N canvas 157 63 1103 580 grav 0;
 #X obj 105 105 vu 15 80 empty empty -1 -8 0 8 -66577 -1 0 0;
 #X obj 93 61 env~;
 #X obj 93 78 - 91;
@@ -437,7 +437,7 @@
 #X obj 105 136 s andamento;
 #X msg 44 -45 120;
 #X obj 44 -73 loadbang;
-#X obj 5 31 tgl 30 0 empty empty empty 17 7 0 10 -261682 -1 -1 0 1
+#X obj 5 31 tgl 30 0 empty empty empty 17 7 0 10 -261682 -1 -1 1 1
 ;
 #X obj 38 187 sel 1;
 #X obj 108 187 sel 0;
@@ -584,7 +584,7 @@
 #X obj -19 -243 image imagens/allaprima_logo.gif;
 #N canvas 152 64 1192 621 sequencer 0;
 #X obj 77 23 hradio 30 1 0 16 empty empty empty 8 -8 0 8 -62784 -258699
--258699 0;
+-258699 11;
 #X obj 77 56 tgl 30 0 empty empty empty 20 8 0 8 -36019 -258699 -1
 0 1;
 #X obj 107 56 tgl 30 0 empty empty empty 20 8 0 8 -44926 -258699 -1
