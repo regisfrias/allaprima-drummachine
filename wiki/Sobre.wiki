@@ -1,6 +1,4 @@
 #labels Featured
-#o que é e para que serve esse negócio
-
 = Alla Prima Drum Machine =
 
 Este software foi desenvolvido para uso do [http://allaprimasp.wordpress.com/ Alla Prima], mas nós achamos que poderia ser útil para outras pessoas, por isso colocamos para download. Note que, por isso, você deve encontrar algumas idiossincrasias que poderemos ou não sanar em tempos vindouros.
