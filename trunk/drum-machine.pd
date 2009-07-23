@@ -412,7 +412,7 @@
 #X connect 59 0 11 0;
 #X connect 62 0 9 1;
 #X coords 0 -1 1 1 295 90 2 100 100;
-#X restore 128 -148 pd grav;
+#X restore 160 -148 pd grav;
 #N canvas 459 79 726 653 andamento 0;
 #X obj 450 346 s init;
 #X obj 468 260 s bar;
@@ -580,7 +580,7 @@
 #X connect 52 0 51 1;
 #X connect 53 0 51 0;
 #X coords 0 -1 1 1 250 90 2 0 0;
-#X restore -131 -148 pd andamento;
+#X restore -99 -148 pd andamento;
 #X obj -19 -243 image imagens/allaprima_logo.gif;
 #N canvas 152 64 1192 621 sequencer 0;
 #X obj 77 23 hradio 30 1 0 16 empty empty empty 8 -8 0 8 -62784 -258699
@@ -900,7 +900,7 @@ creation arguments;
 #X connect 3 0 5 0;
 #X connect 4 0 3 0;
 #X coords 0 -1 1 1 200 50 2 0 0;
-#X restore 224 -265 pd salvar;
+#X restore 256 -265 pd salvar;
 #X text -132 258 alla prima drum machine 1 adaptado de http://www.nullpointer.co.uk/-/pd.htm
 ;
 #N canvas 267 226 718 400 sampleplayer 0;
