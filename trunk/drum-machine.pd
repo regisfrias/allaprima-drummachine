@@ -1,4 +1,4 @@
-#N canvas 115 22 1094 601 10;
+#N canvas 115 22 1038 599 10;
 #N canvas 307 74 880 461 currinstr 0;
 #X obj -88 174 outlet;
 #X obj 20 64 hradio 30 1 0 10 empty empty empty 8 -8 0 8 -241056 -132235
@@ -168,7 +168,7 @@
 #X msg 162 75 1;
 #X obj 161 105 vu 15 80 empty empty -1 -8 0 8 -66577 -1 0 0;
 #X obj 96 203 *~;
-#X obj 184 121 grid grid1 73 200 10000 64 3 100 1 1 1 1 1 305 -110
+#X obj 184 121 grid grid1 73 200 10000 64 3 100 1 1 1 1 1 251 -116
 ;
 #X obj 184 103 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -232,9 +232,9 @@
 1;
 #X obj 261 29 key;
 #X obj 269 123 vsl 15 60 0 200 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3687 1;
+-1 -1 638 1;
 #X obj 287 144 hradio 12 1 0 8 empty empty empty 0 -8 0 10 -262144
--191407 -1 0;
+-191407 -1 3;
 #X obj 293 132 hradio 12 1 0 2 empty empty empty 0 -8 0 10 -99865 -128992
 -1 0;
 #X obj 329 132 hradio 12 1 0 3 empty empty empty 0 -8 0 10 -99865 -128992
@@ -310,7 +310,7 @@
 #X obj 7 2 r andamento;
 #X obj 8 27 expr 250 / ($f1 / 60);
 #X obj 290 121 hsl 91 8 0 0.98 0 0 empty empty empty -2 -8 0 10 -228856
--1 -1 6429 1;
+-1 -1 8500 1;
 #X msg 323 82 0.7;
 #X obj 347 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -594,9 +594,9 @@
 #X obj -19 -253 image imagens/allaprima_logo.gif;
 #N canvas 51 279 1192 621 sequencer 0;
 #X obj 88 23 hradio 30 1 0 16 empty empty empty 8 -8 0 8 -62784 -258699
--258699 1;
+-258699 0;
 #X obj 88 56 tgl 30 0 empty empty empty 20 8 0 8 -36019 -258699 -1
-120 120;
+1 1;
 #X obj 118 56 tgl 30 0 empty empty empty 20 8 0 8 -44926 -258699 -1
 0 1;
 #X obj 148 56 tgl 30 0 empty empty empty 20 8 0 8 -44926 -258699 -1
@@ -604,7 +604,7 @@
 #X obj 178 56 tgl 30 0 empty empty empty 20 8 0 8 -44926 -258699 -1
 0 1;
 #X obj 208 56 tgl 30 0 empty empty empty 20 8 0 8 -36019 -258699 -1
-0 1;
+1 1;
 #X obj 238 56 tgl 30 0 empty empty empty 20 8 0 8 -44926 -258699 -1
 0 1;
 #X obj 268 56 tgl 30 0 empty empty empty 20 8 0 8 -44926 -258699 -1
@@ -612,7 +612,7 @@
 #X obj 298 56 tgl 30 0 empty empty empty 20 8 0 8 -44926 -258699 -1
 0 1;
 #X obj 328 56 tgl 30 0 empty empty empty 20 8 0 8 -36084 -258699 -1
-0 1;
+1 1;
 #X obj 358 56 tgl 30 0 empty empty empty 20 8 0 8 -44926 -258699 -1
 0 1;
 #X obj 388 56 tgl 30 0 empty empty empty 20 8 0 8 -44926 -258699 -1
@@ -620,7 +620,7 @@
 #X obj 418 56 tgl 30 0 empty empty empty 20 8 0 8 -44926 -258699 -1
 0 1;
 #X obj 448 56 tgl 30 0 empty empty empty 20 8 0 8 -36149 -258699 -1
-0 1;
+1 1;
 #X obj 478 56 tgl 30 0 empty empty empty 20 8 0 8 -44926 -258699 -1
 0 1;
 #X obj 508 56 tgl 30 0 empty empty empty 20 8 0 8 -44926 -258699 -1
@@ -893,94 +893,119 @@ creation arguments;
 #X connect 97 1 69 0;
 #X coords 0 -1 1 1 715 100 2 0 0;
 #X restore -131 60 pd sequencer;
-#N canvas 232 212 491 333 salvar 0;
+#N canvas 338 22 491 333 salvar 0;
 #X msg 19 156 \; seq read \$1;
 #X obj 19 129 openpanel;
-#X obj 13 8 bng 15 250 50 0 empty empty carregar_música 17 7 0 10
--262144 -1 -1;
+#X obj 13 8 bng 15 250 50 0 empty empty carregar_música_(txt) 17 7
+0 10 -262144 -1 -1;
 #X obj 109 129 savepanel;
-#X obj 13 28 bng 15 250 50 0 empty empty salvar_música 17 7 0 10 -262144
--1 -1;
+#X obj 13 28 bng 15 250 50 0 empty empty salvar_música_(txt) 17 7
+0 10 -262144 -1 -1;
 #X msg 109 156 \; seq write \$1.txt;
 #X obj 20 204 s andamentobang;
+#X symbolatom 159 7 0 0 0 0 - - -;
+#X obj 21 239 makesymbol;
+#X obj 21 263 split_path;
+#X symbolatom 159 27 0 0 0 0 - - -;
+#X obj 118 237 makesymbol;
+#X obj 118 261 split_path;
 #X connect 1 0 0 0;
 #X connect 1 0 6 0;
+#X connect 1 0 8 0;
 #X connect 2 0 1 0;
 #X connect 3 0 5 0;
+#X connect 3 0 11 0;
 #X connect 4 0 3 0;
-#X coords 0 -1 1 1 200 50 2 0 0;
-#X restore 206 -276 pd salvar;
+#X connect 8 0 9 0;
+#X connect 9 1 7 0;
+#X connect 11 0 12 0;
+#X connect 12 1 10 0;
+#X coords 0 -1 1 1 300 50 2 0 0;
+#X restore 174 -277 pd salvar;
 #X text 103 200 alla prima drum machine 1 adaptado de http://www.nullpointer.co.uk/-/pd.htm
 ;
-#N canvas 302 384 718 400 sampleplayer 0;
-#X obj 13 -81 openpanel;
-#X obj 15 11 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#N canvas 494 274 718 400 sampleplayer 0;
+#X obj 13 -77 openpanel;
+#X obj 15 5 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 13 -36 soundfiler;
+#X obj 13 -32 soundfiler;
 #N canvas 15 37 450 300 (subpatch) 0;
-#X array sampleL 169348 float 0;
-#X coords 0 1 169347 -1 180 30 1;
-#X restore 15 52 graph;
-#X msg 13 -59 read -resize \$1 sampleL sampleR;
+#X array sampleL 169347 float 0;
+#X coords 0 1 169346 -1 180 30 1;
+#X restore 15 56 graph;
+#X msg 13 -55 read -resize \$1 sampleL sampleR;
 #N canvas 15 37 450 300 (subpatch) 0;
-#X array sampleR 169348 float 0;
-#X coords 0 1 169347 -1 180 30 1;
-#X restore 15 99 graph;
-#X obj 244 192 tabplay~ sampleL;
-#X obj 347 191 tabplay~ sampleR;
-#X obj 242 146 r beat;
-#X obj 243 168 sel 0;
-#X obj 232 -24 r desligou;
-#X obj 245 216 *~;
-#X obj 345 214 *~;
-#X obj 298 -24 r ligou;
-#X obj 203 48 vu 15 80 empty empty -1 -8 0 8 -66577 -1 1 0;
-#X obj 248 48 vsl 15 80 0 1 0 0 empty empty empty 0 -9 0 10 -208697
+#X array sampleR 169347 float 0;
+#X coords 0 1 169346 -1 180 30 1;
+#X restore 15 103 graph;
+#X obj 244 196 tabplay~ sampleL;
+#X obj 347 195 tabplay~ sampleR;
+#X obj 242 150 r beat;
+#X obj 243 172 sel 0;
+#X obj 232 -20 r desligou;
+#X obj 245 220 *~;
+#X obj 345 218 *~;
+#X obj 298 -20 r ligou;
+#X obj 248 52 vsl 15 80 0 1 0 0 empty empty empty 0 -9 0 10 -208697
 -143491 -1 0 0;
-#X obj 303 48 vu 15 80 empty empty -1 -8 0 8 -66577 -1 1 0;
-#X obj 268 48 vsl 15 80 0 1 0 0 empty empty empty 0 -9 0 10 -208697
+#X obj 268 52 vsl 15 80 0 1 0 0 empty empty empty 0 -9 0 10 -208697
 -143491 -1 0 0;
-#X obj 134 11 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
-#X obj 238 245 spigot~;
-#X obj 318 245 spigot~;
-#X text 152 9 liga/desliga (c);
-#X obj 257 -70 key;
-#X obj 249 -48 sel 99;
-#X text 32 9 carregar loop;
-#X obj 236 281 s~ samplerL;
-#X obj 316 281 s~ samplerR;
-#X obj 359 -63 env~;
-#X obj 359 -46 - 91;
-#X obj 389 -63 env~;
-#X obj 389 -46 - 91;
+#X obj 134 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 238 249 spigot~;
+#X obj 318 249 spigot~;
+#X text 152 3 liga/desliga (c);
+#X obj 257 -66 key;
+#X obj 249 -44 sel 99;
+#X text 32 3 carregar loop;
+#X obj 236 285 s~ samplerL;
+#X obj 316 285 s~ samplerR;
+#X obj 359 -59 env~;
+#X obj 359 -42 - 91;
+#X obj 389 -59 env~;
+#X obj 389 -42 - 91;
+#X text 385 22 o loop precisa estar no mesmo andamento da m�sica;
+#X text 385 37 sob pena de efeito steve reich.;
+#X symbolatom 15 23 0 0 0 0 - - -;
+#X obj 97 258 makesymbol;
+#X obj 97 216 list split 2;
+#X obj 96 236 list split 1;
+#X obj 97 282 split_path;
+#X text 385 53 apenas um compasso � lido.;
+#X obj 227 52 vu 15 80 empty empty -1 -8 0 8 -66577 -1 0 0;
+#X obj 288 52 vu 15 80 empty empty -1 -8 0 8 -66577 -1 0 0;
 #X connect 0 0 4 0;
 #X connect 1 0 0 0;
 #X connect 4 0 2 0;
+#X connect 4 0 33 0;
 #X connect 6 0 11 0;
 #X connect 7 0 12 0;
 #X connect 8 0 9 0;
 #X connect 9 0 6 0;
 #X connect 9 0 7 0;
-#X connect 10 0 15 0;
-#X connect 11 0 19 0;
-#X connect 12 0 20 0;
-#X connect 13 0 15 0;
-#X connect 15 0 17 0;
-#X connect 15 0 11 1;
-#X connect 17 0 12 1;
-#X connect 18 0 19 1;
-#X connect 18 0 20 1;
-#X connect 19 1 25 0;
-#X connect 19 1 27 0;
-#X connect 20 1 26 0;
-#X connect 20 1 29 0;
-#X connect 22 0 23 0;
-#X connect 23 0 18 0;
+#X connect 10 0 14 0;
+#X connect 11 0 17 0;
+#X connect 12 0 18 0;
+#X connect 13 0 14 0;
+#X connect 14 0 15 0;
+#X connect 14 0 11 1;
+#X connect 15 0 12 1;
+#X connect 16 0 17 1;
+#X connect 16 0 18 1;
+#X connect 17 1 23 0;
+#X connect 17 1 25 0;
+#X connect 18 1 24 0;
+#X connect 18 1 27 0;
+#X connect 20 0 21 0;
+#X connect 21 0 16 0;
+#X connect 25 0 26 0;
+#X connect 26 0 37 0;
 #X connect 27 0 28 0;
-#X connect 28 0 14 1;
-#X connect 29 0 30 0;
-#X connect 30 0 16 1;
+#X connect 28 0 38 0;
+#X connect 32 0 35 0;
+#X connect 33 1 34 0;
+#X connect 34 0 32 0;
+#X connect 35 1 31 0;
 #X coords 0 -1 1 1 370 140 2 0 0;
 #X restore 214 -88 pd sampleplayer;
 #N canvas 467 155 759 654 player 0;
@@ -989,12 +1014,12 @@ creation arguments;
 ;
 #X obj 2 -24 soundfiler;
 #N canvas 15 37 450 300 (subpatch) 0;
-#X array player1L 3.57542e+06 float 0;
-#X coords 0 1 3.57542e+06 -1 180 30 1;
+#X array player1L 169348 float 0;
+#X coords 0 1 169347 -1 180 30 1;
 #X restore 4 59 graph;
 #N canvas 15 37 450 300 (subpatch) 0;
-#X array player1R 3.57542e+06 float 0;
-#X coords 0 1 3.57542e+06 -1 180 30 1;
+#X array player1R 169348 float 0;
+#X coords 0 1 169347 -1 180 30 1;
 #X restore 4 106 graph;
 #X obj 364 63 *~;
 #X obj 464 61 *~;
@@ -1059,12 +1084,12 @@ creation arguments;
 ;
 #X obj 2 -24 soundfiler;
 #N canvas 15 37 450 300 (subpatch) 0;
-#X array player2L 10586 float 0;
-#X coords 0 1 10585 -1 180 30 1;
+#X array player2L 169347 float 0;
+#X coords 0 1 169346 -1 180 30 1;
 #X restore 4 59 graph;
 #N canvas 15 37 450 300 (subpatch) 0;
-#X array player2R 10586 float 0;
-#X coords 0 1 10585 -1 180 30 1;
+#X array player2R 169347 float 0;
+#X coords 0 1 169346 -1 180 30 1;
 #X restore 4 106 graph;
 #X obj 364 63 *~;
 #X obj 464 61 *~;
@@ -1129,12 +1154,12 @@ creation arguments;
 ;
 #X obj 2 -24 soundfiler;
 #N canvas 15 37 450 300 (subpatch) 0;
-#X array player3L 10586 float 0;
-#X coords 0 1 10585 -1 180 30 1;
+#X array player3L 169346 float 0;
+#X coords 0 1 169345 -1 180 30 1;
 #X restore 4 59 graph;
 #N canvas 15 37 450 300 (subpatch) 0;
-#X array player3R 10586 float 0;
-#X coords 0 1 10585 -1 180 30 1;
+#X array player3R 169346 float 0;
+#X coords 0 1 169345 -1 180 30 1;
 #X restore 4 106 graph;
 #X obj 364 63 *~;
 #X obj 464 61 *~;
@@ -1158,9 +1183,9 @@ creation arguments;
 #X obj 272 -91 sel 111;
 #X text 244 4 play o;
 #X obj 189 61 vsl 30 72 0 1 0 0 empty empty empty 0 -9 0 10 -208697
--1 -1 0 0;
+-1 -1 7100 0;
 #X obj 223 61 vsl 30 72 0 1 0 0 empty empty empty 0 -9 0 10 -208697
--1 -1 0 0;
+-1 -1 7100 0;
 #X obj 2 192 makesymbol;
 #X obj 2 150 list split 2;
 #X obj 1 170 list split 1;
@@ -1177,6 +1202,7 @@ creation arguments;
 #X connect 11 0 18 0;
 #X connect 13 0 14 0;
 #X connect 14 0 8 0;
+#X connect 14 0 24 0;
 #X connect 16 0 2 0;
 #X connect 16 0 27 0;
 #X connect 17 0 6 0;
@@ -1198,12 +1224,12 @@ creation arguments;
 ;
 #X obj 2 -24 soundfiler;
 #N canvas 15 37 450 300 (subpatch) 0;
-#X array player4L 3.57542e+06 float 0;
-#X coords 0 1 3.57542e+06 -1 180 30 1;
+#X array player4L 84674 float 0;
+#X coords 0 1 84673 -1 180 30 1;
 #X restore 4 59 graph;
 #N canvas 15 37 450 300 (subpatch) 0;
-#X array player4R 3.57542e+06 float 0;
-#X coords 0 1 3.57542e+06 -1 180 30 1;
+#X array player4R 84674 float 0;
+#X coords 0 1 84673 -1 180 30 1;
 #X restore 4 106 graph;
 #X obj 364 63 *~;
 #X obj 464 61 *~;
@@ -1227,9 +1253,9 @@ creation arguments;
 #X obj 272 -91 sel 112;
 #X text 244 4 play p;
 #X obj 189 61 vsl 30 72 0 1 0 0 empty empty empty 0 -9 0 10 -208697
--1 -1 0 0;
+-1 -1 7100 0;
 #X obj 223 61 vsl 30 72 0 1 0 0 empty empty empty 0 -9 0 10 -208697
--1 -1 0 0;
+-1 -1 7100 0;
 #X obj 16 193 makesymbol;
 #X obj 16 151 list split 2;
 #X obj 15 171 list split 1;
@@ -1246,6 +1272,7 @@ creation arguments;
 #X connect 11 0 18 0;
 #X connect 13 0 14 0;
 #X connect 14 0 8 0;
+#X connect 14 0 24 0;
 #X connect 16 0 2 0;
 #X connect 16 0 27 0;
 #X connect 17 0 6 0;
