@@ -1,4 +1,4 @@
-#N canvas 115 22 1038 599 10;
+#N canvas 155 62 1038 599 10;
 #N canvas 307 74 880 461 currinstr 0;
 #X obj -88 174 outlet;
 #X obj 20 64 hradio 30 1 0 10 empty empty empty 8 -8 0 8 -241056 -132235
@@ -122,7 +122,7 @@
 #X obj 124 105 vsl 15 79 0 3 0 0 empty empty empty 0 -9 0 10 -208697
 -143491 -1 2600 0;
 #X obj 66 203 *~;
-#N canvas 44 351 450 300 mix 0;
+#N canvas 489 528 450 300 mix 0;
 #X obj 152 227 outlet~;
 #X obj 22 43 r~ seq1;
 #X obj 72 43 r~ seq2;
@@ -141,6 +141,7 @@
 #X obj 363 117 r~ player3R;
 #X obj 281 142 r~ player4L;
 #X obj 361 142 r~ player4R;
+#X obj 47 165 adc~;
 #X connect 1 0 0 0;
 #X connect 1 0 6 0;
 #X connect 2 0 0 0;
@@ -163,12 +164,14 @@
 #X connect 15 0 6 0;
 #X connect 16 0 0 0;
 #X connect 17 0 6 0;
+#X connect 18 0 0 0;
+#X connect 18 1 6 0;
 #X restore 31 130 pd mix;
 #X obj 164 53 loadbang;
 #X msg 162 75 1;
 #X obj 161 105 vu 15 80 empty empty -1 -8 0 8 -66577 -1 0 0;
 #X obj 96 203 *~;
-#X obj 184 121 grid grid1 73 200 10000 64 3 100 1 1 1 1 1 251 -116
+#X obj 184 121 grid grid1 73 200 10000 64 3 100 1 1 1 1 1 259 -116
 ;
 #X obj 184 103 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -232,9 +235,9 @@
 1;
 #X obj 261 29 key;
 #X obj 269 123 vsl 15 60 0 200 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 638 1;
+-1 -1 451 1;
 #X obj 287 144 hradio 12 1 0 8 empty empty empty 0 -8 0 10 -262144
--191407 -1 3;
+-191407 -1 0;
 #X obj 293 132 hradio 12 1 0 2 empty empty empty 0 -8 0 10 -99865 -128992
 -1 0;
 #X obj 329 132 hradio 12 1 0 3 empty empty empty 0 -8 0 10 -99865 -128992
@@ -310,7 +313,7 @@
 #X obj 7 2 r andamento;
 #X obj 8 27 expr 250 / ($f1 / 60);
 #X obj 290 121 hsl 91 8 0 0.98 0 0 empty empty empty -2 -8 0 10 -228856
--1 -1 8500 1;
+-1 -1 8129 1;
 #X msg 323 82 0.7;
 #X obj 347 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -612,11 +615,11 @@
 #X obj 298 56 tgl 30 0 empty empty empty 20 8 0 8 -44926 -258699 -1
 0 1;
 #X obj 328 56 tgl 30 0 empty empty empty 20 8 0 8 -36084 -258699 -1
-1 1;
+0 1;
 #X obj 358 56 tgl 30 0 empty empty empty 20 8 0 8 -44926 -258699 -1
 0 1;
 #X obj 388 56 tgl 30 0 empty empty empty 20 8 0 8 -44926 -258699 -1
-0 1;
+1 1;
 #X obj 418 56 tgl 30 0 empty empty empty 20 8 0 8 -44926 -258699 -1
 0 1;
 #X obj 448 56 tgl 30 0 empty empty empty 20 8 0 8 -36149 -258699 -1
@@ -950,7 +953,7 @@ creation arguments;
 -143491 -1 0 0;
 #X obj 268 52 vsl 15 80 0 1 0 0 empty empty empty 0 -9 0 10 -208697
 -143491 -1 0 0;
-#X obj 134 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 134 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X obj 238 249 spigot~;
 #X obj 318 249 spigot~;
@@ -1014,19 +1017,19 @@ creation arguments;
 ;
 #X obj 2 -24 soundfiler;
 #N canvas 15 37 450 300 (subpatch) 0;
-#X array player1L 169348 float 0;
-#X coords 0 1 169347 -1 180 30 1;
+#X array player1L 4e+06 float 0;
+#X coords 0 1 4e+06 -1 180 30 1;
 #X restore 4 59 graph;
 #N canvas 15 37 450 300 (subpatch) 0;
-#X array player1R 169348 float 0;
-#X coords 0 1 169347 -1 180 30 1;
+#X array player1R 4e+06 float 0;
+#X coords 0 1 4e+06 -1 180 30 1;
 #X restore 4 106 graph;
 #X obj 364 63 *~;
 #X obj 464 61 *~;
 #X obj 189 61 vsl 30 72 0 1 0 0 empty empty empty 0 -9 0 10 -208697
 -1 -1 7100 0;
 #X text 20 4 carregar sample;
-#X obj 123 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+#X obj 123 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X obj 357 92 spigot~;
 #X obj 437 92 spigot~;
@@ -1084,12 +1087,12 @@ creation arguments;
 ;
 #X obj 2 -24 soundfiler;
 #N canvas 15 37 450 300 (subpatch) 0;
-#X array player2L 169347 float 0;
-#X coords 0 1 169346 -1 180 30 1;
+#X array player2L 2.3814e+06 float 0;
+#X coords 0 1 2.3814e+06 -1 180 30 1;
 #X restore 4 59 graph;
 #N canvas 15 37 450 300 (subpatch) 0;
-#X array player2R 169347 float 0;
-#X coords 0 1 169346 -1 180 30 1;
+#X array player2R 2.3814e+06 float 0;
+#X coords 0 1 2.3814e+06 -1 180 30 1;
 #X restore 4 106 graph;
 #X obj 364 63 *~;
 #X obj 464 61 *~;
@@ -1113,9 +1116,9 @@ creation arguments;
 #X obj 277 -74 sel 48;
 #X text 244 4 play 0;
 #X obj 189 61 vsl 30 72 0 1 0 0 empty empty empty 0 -9 0 10 -208697
--1 -1 7100 0;
+-1 -1 1600 0;
 #X obj 223 61 vsl 30 72 0 1 0 0 empty empty empty 0 -9 0 10 -208697
--1 -1 7100 0;
+-1 -1 1600 0;
 #X obj 8 219 makesymbol;
 #X obj 8 177 list split 2;
 #X obj 7 197 list split 1;
@@ -1288,7 +1291,7 @@ creation arguments;
 #X connect 29 1 15 0;
 #X coords 0 -1 1 1 300 140 2 0 0;
 #X restore 590 114 pd player;
-#N canvas 197 509 645 350 gravar 0;
+#N canvas 161 223 645 350 gravar 0;
 #X obj 349 136 metro 300;
 #X obj 349 116 r metro;
 #X msg 134 136 start;
