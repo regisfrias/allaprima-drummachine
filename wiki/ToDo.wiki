@@ -1,4 +1,4 @@
 #labels Featured,Phase-Implementation
 = ToDo =
 
-  * Controles individuais de volume para os instrumentos
+  * Controles individuais de volume para os instrumentos (feito)
