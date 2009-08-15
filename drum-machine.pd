@@ -1,4 +1,4 @@
-#N canvas 155 62 1038 599 10;
+#N canvas 181 81 1038 599 10;
 #N canvas 307 74 880 461 currinstr 0;
 #X obj -88 174 outlet;
 #X obj 20 64 hradio 30 1 0 10 empty empty empty 8 -8 0 8 -241056 -132235
@@ -120,9 +120,9 @@
 #X obj 93 61 env~;
 #X obj 93 78 - 91;
 #X obj 124 105 vsl 15 79 0 3 0 0 empty empty empty 0 -9 0 10 -208697
--143491 -1 2600 0;
+-143491 -1 3800 0;
 #X obj 66 203 *~;
-#N canvas 489 528 450 300 mix 0;
+#N canvas 451 22 450 300 mix 0;
 #X obj 152 227 outlet~;
 #X obj 22 43 r~ seq1;
 #X obj 72 43 r~ seq2;
@@ -164,8 +164,6 @@
 #X connect 15 0 6 0;
 #X connect 16 0 0 0;
 #X connect 17 0 6 0;
-#X connect 18 0 0 0;
-#X connect 18 1 6 0;
 #X restore 31 130 pd mix;
 #X obj 164 53 loadbang;
 #X msg 162 75 1;
@@ -235,7 +233,7 @@
 1;
 #X obj 261 29 key;
 #X obj 269 123 vsl 15 60 0 200 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 451 1;
+-1 -1 3687 1;
 #X obj 287 144 hradio 12 1 0 8 empty empty empty 0 -8 0 10 -262144
 -191407 -1 0;
 #X obj 293 132 hradio 12 1 0 2 empty empty empty 0 -8 0 10 -99865 -128992
@@ -313,7 +311,7 @@
 #X obj 7 2 r andamento;
 #X obj 8 27 expr 250 / ($f1 / 60);
 #X obj 290 121 hsl 91 8 0 0.98 0 0 empty empty empty -2 -8 0 10 -228856
--1 -1 8129 1;
+-1 -1 6429 1;
 #X msg 323 82 0.7;
 #X obj 347 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -341,7 +339,7 @@
 #X text 201 102 filtro (z);
 #X text 286 102 delay (x);
 #X obj 142 105 vsl 15 79 0 3 0 0 empty empty empty 0 -9 0 10 -208697
--143491 -1 2600 0;
+-143491 -1 3800 0;
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;
 #X connect 3 0 4 1;
@@ -597,9 +595,9 @@
 #X obj -19 -253 image imagens/allaprima_logo.gif;
 #N canvas 51 279 1192 621 sequencer 0;
 #X obj 88 23 hradio 30 1 0 16 empty empty empty 8 -8 0 8 -62784 -258699
--258699 0;
+-258699 10;
 #X obj 88 56 tgl 30 0 empty empty empty 20 8 0 8 -36019 -258699 -1
-1 1;
+0 1;
 #X obj 118 56 tgl 30 0 empty empty empty 20 8 0 8 -44926 -258699 -1
 0 1;
 #X obj 148 56 tgl 30 0 empty empty empty 20 8 0 8 -44926 -258699 -1
@@ -607,7 +605,7 @@
 #X obj 178 56 tgl 30 0 empty empty empty 20 8 0 8 -44926 -258699 -1
 0 1;
 #X obj 208 56 tgl 30 0 empty empty empty 20 8 0 8 -36019 -258699 -1
-1 1;
+0 1;
 #X obj 238 56 tgl 30 0 empty empty empty 20 8 0 8 -44926 -258699 -1
 0 1;
 #X obj 268 56 tgl 30 0 empty empty empty 20 8 0 8 -44926 -258699 -1
@@ -621,7 +619,7 @@
 #X obj 388 56 tgl 30 0 empty empty empty 20 8 0 8 -44926 -258699 -1
 1 1;
 #X obj 418 56 tgl 30 0 empty empty empty 20 8 0 8 -44926 -258699 -1
-0 1;
+1 1;
 #X obj 448 56 tgl 30 0 empty empty empty 20 8 0 8 -36149 -258699 -1
 1 1;
 #X obj 478 56 tgl 30 0 empty empty empty 20 8 0 8 -44926 -258699 -1
@@ -953,7 +951,7 @@ creation arguments;
 -143491 -1 0 0;
 #X obj 268 52 vsl 15 80 0 1 0 0 empty empty empty 0 -9 0 10 -208697
 -143491 -1 0 0;
-#X obj 134 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+#X obj 134 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X obj 238 249 spigot~;
 #X obj 318 249 spigot~;
@@ -1029,7 +1027,7 @@ creation arguments;
 #X obj 189 61 vsl 30 72 0 1 0 0 empty empty empty 0 -9 0 10 -208697
 -1 -1 7100 0;
 #X text 20 4 carregar sample;
-#X obj 123 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 123 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X obj 357 92 spigot~;
 #X obj 437 92 spigot~;
@@ -1116,9 +1114,9 @@ creation arguments;
 #X obj 277 -74 sel 48;
 #X text 244 4 play 0;
 #X obj 189 61 vsl 30 72 0 1 0 0 empty empty empty 0 -9 0 10 -208697
--1 -1 1600 0;
+-1 -1 7100 0;
 #X obj 223 61 vsl 30 72 0 1 0 0 empty empty empty 0 -9 0 10 -208697
--1 -1 1600 0;
+-1 -1 7100 0;
 #X obj 8 219 makesymbol;
 #X obj 8 177 list split 2;
 #X obj 7 197 list split 1;
@@ -1315,6 +1313,7 @@ creation arguments;
 #X text 54 9 Gravar performance;
 #X obj 307 72 spigot~;
 #X obj 387 72 spigot~;
+#X obj 318 175 adc~;
 #X connect 1 0 0 0;
 #X connect 2 0 4 0;
 #X connect 3 0 4 0;
@@ -1336,6 +1335,8 @@ creation arguments;
 #X connect 17 1 3 0;
 #X connect 19 1 11 0;
 #X connect 20 1 14 0;
+#X connect 21 0 4 0;
+#X connect 21 1 4 1;
 #X coords 0 -1 1 1 170 90 2 0 0;
 #X restore 414 -183 pd gravar;
 #X connect 0 0 4 0;
