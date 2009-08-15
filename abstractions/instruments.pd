@@ -1,4 +1,4 @@
-#N canvas 118 27 1009 703 12;
+#N canvas 139 22 1009 703 12;
 #X obj 186 109 bng 25 250 50 0 empty empty play 30 10 0 8 -258699 -241291
 -1;
 #X obj 216 132 bng 25 250 50 0 empty empty load 30 10 0 8 -258699 -241291
@@ -6,7 +6,7 @@
 #X symbolatom 268 651 50 0 0 0 - - -;
 #X obj 186 86 r channel1;
 #X obj 99 192 sampleplayer 1;
-#X obj 99 220 outlet~;
+#X obj 98 249 outlet~;
 #X obj 63 27 r sampleinit;
 #X floatatom 25 148 5 0 0 0 - - -;
 #X text 20 130 length;
@@ -124,6 +124,11 @@
 #X msg 320 15 ../samples/3_chimbaufechado_camposentr.wav;
 #X msg 164 325 ../samples/2_caixapop.wav;
 #X msg 702 443 ../samples/4_chimbauaberto_camposentr.wav;
+#X obj 1 33 r bdvol;
+#X obj 80 410 r sdvol;
+#X obj 296 188 r clvol;
+#X obj 443 419 r opvol;
+#X obj 629 194 r shvol;
 #X connect 0 0 4 4;
 #X connect 1 0 4 5;
 #X connect 3 0 0 0;
@@ -225,3 +230,8 @@
 #X connect 111 0 92 6;
 #X connect 112 0 91 6;
 #X connect 113 0 93 6;
+#X connect 114 0 9 0;
+#X connect 115 0 25 0;
+#X connect 116 0 41 0;
+#X connect 117 0 57 0;
+#X connect 118 0 73 0;

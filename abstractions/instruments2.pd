@@ -1,4 +1,4 @@
-#N canvas 187 97 1009 703 12;
+#N canvas 295 254 1009 703 12;
 #X obj 171 109 bng 25 250 50 0 empty empty play 30 10 0 8 -258699 -241291
 -1;
 #X obj 201 132 bng 25 250 50 0 empty empty load 30 10 0 8 -258699 -241291
@@ -121,6 +121,11 @@
 #X obj 785 369 openpanel;
 #X msg 785 392 \$1;
 #X obj 785 346 r load9;
+#X obj 8 222 r cwvol;
+#X obj 87 438 r cpvol;
+#X obj 312 213 r rdvol;
+#X obj 472 505 r tm1vol;
+#X obj 646 52 r tm2vol;
 #X connect 0 0 92 4;
 #X connect 1 0 92 5;
 #X connect 4 0 87 0;
@@ -222,3 +227,8 @@
 #X connect 109 0 110 0;
 #X connect 110 0 96 6;
 #X connect 111 0 109 0;
+#X connect 112 0 7 0;
+#X connect 113 0 23 0;
+#X connect 114 0 38 0;
+#X connect 115 0 59 0;
+#X connect 116 0 75 0;
